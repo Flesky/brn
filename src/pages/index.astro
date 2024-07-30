@@ -65,6 +65,14 @@ const techStack = [
     icon: 'devicon:cloudflare',
   },
 ]
+
+const experience = [
+  {
+    duration: '2021 - Present',
+    company: 'SMSGlobal',
+    location: 'Quezon City, Philippines',
+  },
+]
 ---
 
 <html lang="en" class="bg-gray-950">
@@ -83,7 +91,7 @@ const techStack = [
     >
       <div class="max-w-2xl mx-auto text-balance px-4">
         <div class="font-medium">Baron Rodrigo</div>
-        <div class="text-gray-500">Web Developer @ SMSGlobal</div>
+        <div class="text-gray-500">Software Developer @ SMSGlobal</div>
         <div class="text-gray-500">Quezon City, Philippines</div>
         <h1
           class="mt-12 text-2xl border-l ps-4 border-gray-300 leading-9 text-gray-300"
@@ -105,24 +113,20 @@ const techStack = [
     <div class="max-w-2xl mx-auto p-4 mt-6 space-y-16">
       <section>
         <h2>About</h2>
-        <p class="mt-4 text-balance">
-          I realized my love for programming very early in life. At age 6, I
-          distinctly remember a light bulb moment in my head as I was playing
-          with <a>Scratch</a>. Fast forward to today, I now possess a trained
-          eye for details and a deep understanding of paradigms, principles, and
-          best practices that I have honed through years of experimenting with
-          design and code — all to develop the best web apps in the world.
+        <p class="mt-4">
+          Frontend-oriented software engineer working on web applications mostly
+          using TypeScript, Vue, Nuxt, and React. Has a keen eye for details and
+          a deep understanding of paradigms, principles, and best practices.
         </p>
 
-        <p class="mt-4">
-          During college, I've won multiple awards and competitions, and have
-          had the honor to work for the government to develop an application for
-          public transportation monitoring. Right now, I work for SMSGlobal.
-        </p>
+        <!--<p class="mt-4">-->
+        <!--  I currently work for SMSGlobal, building beautiful, fast, and-->
+        <!--  functional applications for our clients.-->
+        <!--</p>-->
 
         <p class="mt-4">
-          Outside of work, I'm passionate about tech and games. Here's my
-          progress on some of the things I'm pursuing:
+          Outside of work, I'm passionate about tech, music, and games. Here's
+          my progress on some of the things I'm pursuing:
         </p>
         <ul class="mt-2 space-y-2">
           <StatItem icon="ph:computer-tower"
@@ -143,34 +147,34 @@ const techStack = [
         </ul>
       </section>
 
+      <!--<section>-->
+      <!--  <h2>Tech Stack</h2>-->
+      <!--  <p class="mt-2">-->
+      <!--    I can work with any language and tooling but here's what I work with-->
+      <!--    best:-->
+      <!--  </p>-->
+      <!--  <ul class="grid grid-cols-3 sm:grid-cols-6 mt-4">-->
+      <!--    {-->
+      <!--      techStack.map(({ name, icon }) => (-->
+      <!--        <li class="bg-white/10 hover:bg-white/20 transition duration-150 border border-black hover:border-gray-200/20 select-none rounded flex flex-col py-3 px-2 gap-3 items-center text-center">-->
+      <!--          <Icon name={icon} size="28" />-->
+      <!--          <div class="text-xs leading-none">{name}</div>-->
+      <!--        </li>-->
+      <!--      ))-->
+      <!--    }-->
+      <!--  </ul>-->
+      <!--</section>-->
+
       <section>
-        <h2>Tech Stack</h2>
-        <p class="mt-2">
-          I can work with any language and tooling but here's what I work with
-          best:
-        </p>
-        <ul class="grid grid-cols-3 sm:grid-cols-6 mt-4">
-          {
-            techStack.map(({ name, icon }) => (
-              <li class="bg-white/10 hover:bg-white/20 transition duration-150 border border-black hover:border-gray-200/20 select-none rounded flex flex-col py-3 px-2 gap-3 items-center text-center">
-                <Icon name={icon} size="28" />
-                <div class="text-xs leading-none">{name}</div>
-              </li>
-            ))
-          }
+        <h2>Experience</h2>
+
+        <ul>
+          <li></li>
         </ul>
       </section>
 
       <section>
-        <h2>Experience</h2>
-      </section>
-
-      <section>
         <h2>Projects</h2>
-      </section>
-
-      <section>
-        <h2>My stats</h2>
       </section>
 
       <section>
