@@ -81,17 +81,21 @@ const experience = [
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
+    <title>Baron - Software Developer</title>
   </head>
   <body class="text-gray-200">
     <div
-      class="relative bg-gray-950 bg-center w-full py-32"
-      style="background-size: 64px 64px; background-image: linear-gradient(to right, #3339 1px, transparent 1px),
-    linear-gradient(to bottom, #3339 1px, transparent 1px);"
+      class="relative bg-center w-full py-32"
+      style="background-size: 64px 64px; background-image: linear-gradient(to right, #3337 1px, transparent 1px), linear-gradient(to bottom, #3337 1px, transparent 1px);"
     >
-      <div class="max-w-2xl mx-auto text-balance px-4">
+      <div class="max-w-2xl mx-auto flex flex-col text-balance px-4">
         <div class="font-medium">Baron Rodrigo</div>
-        <div class="text-gray-500">Software Developer @ SMSGlobal</div>
+        <div class="text-gray-500 flex items-center">
+          Software Developer @ SMSGlobal<div
+            class="bg-red-500 w-1 h-1 ms-2 rounded-full animate-pulse"
+          >
+          </div>
+        </div>
         <div class="text-gray-500">Quezon City, Philippines</div>
         <h1
           class="mt-12 text-2xl border-l ps-4 border-gray-300 leading-9 text-gray-300"
@@ -99,14 +103,20 @@ const experience = [
           Building web apps that stand the test of time in record time.
         </h1>
         <div class="mt-12">
-          <button class="bg-orange-700 text-white rounded px-6 py-2"
-            >Contact</button
+          <a
+            href="#contact"
+            class="bg-orange-700 text-white rounded px-6 py-2.5">Contact</a
           >
-          <button
-            class="border border-gray-700 bg-gray-800 text-white rounded px-6 py-2"
-            >View resume</button
-          >
+          <!--<a-->
+          <!--  class="border border-gray-700 bg-gray-800 text-white rounded px-6 py-2"-->
+          <!--  >View resume</a-->
+          <!--&gt;-->
         </div>
+      </div>
+
+      <div
+        class="absolute bottom-0 w-full h-4 bg-gradient-to-b from-gray-950/0 to-gray-950"
+      >
       </div>
     </div>
 
@@ -125,7 +135,7 @@ const experience = [
         <!--</p>-->
 
         <p class="mt-4">
-          Outside of work, I'm passionate about tech, music, and games. Here's
+          In my free time, I'm passionate about tech, music, and games. Here's
           my progress on some of the things I'm pursuing:
         </p>
         <ul class="mt-2 space-y-2">
@@ -133,14 +143,13 @@ const experience = [
             >80 computers built and sold</StatItem
           >
           <StatItem icon="ph:text-t">130 WPM on MonkeyType</StatItem>
-          <StatItem icon="ph:shield-star">
-            <span class="bg-purple-700 font-medium px-2 py-1 rounded"
-              >Master</span
-            > in League of Legends
+          <StatItem icon="ph:medal">
+            <span class="text-purple-400 font-medium">Master</span> in League of
+            Legends
           </StatItem>
           <StatItem icon="ph:arrow-square-up-right-fill"
             ><span
-              class="bg-gradient-to-br from-gray-400 to-gray-300 text-black font-medium px-2 py-1 rounded"
+              class="bg-gradient-to-b from-gray-400 to-gray-200 bg-clip-text text-transparent font-semibold"
               >Advanced Lv. 1</span
             > on The World's Finest Dance Simulation Game</StatItem
           >
@@ -149,10 +158,6 @@ const experience = [
 
       <!--<section>-->
       <!--  <h2>Tech Stack</h2>-->
-      <!--  <p class="mt-2">-->
-      <!--    I can work with any language and tooling but here's what I work with-->
-      <!--    best:-->
-      <!--  </p>-->
       <!--  <ul class="grid grid-cols-3 sm:grid-cols-6 mt-4">-->
       <!--    {-->
       <!--      techStack.map(({ name, icon }) => (-->
@@ -167,29 +172,78 @@ const experience = [
 
       <section>
         <h2>Experience</h2>
-
-        <ul>
-          <li></li>
+        <ul class="mt-4 space-y-4">
+          <li class="grid grid-cols-3 gap-3">
+            <div>Feb. 2023 - now</div>
+            <div class="col-span-2">
+              <div>Software Developer</div><div class="text-gray-400">
+                SMSGlobal
+              </div>
+            </div>
+          </li>
+          <li class="grid grid-cols-3 gap-3">
+            <div>June 2022 - June 2023</div>
+            <div class="col-span-2">
+              <div>Lead Frontend Developer</div><div class="text-gray-400">
+                Department of Science and Technology - Philippines
+              </div>
+            </div>
+          </li>
         </ul>
       </section>
 
       <section>
         <h2>Projects</h2>
+        <ul class="mt-4 space-y-4">
+          <li>
+            <a
+              href="https://github.com/flesky/react-admin-starter"
+              target="_blank"
+            >
+              <h3 class="inline-flex flex items-center gap-2">
+                react-admin-starter<Icon name="ph:arrow-up-right" />
+              </h3>
+              <p class="mt-1 text-gray-400">
+                An opinionated starter template for rapidly developing admin
+                apps using React.
+              </p></a
+            >
+          </li>
+          <li>
+            <a href="https://worden.web.app" target="_blank">
+              <h3 class="inline-flex flex items-center gap-2">
+                Worden<Icon name="ph:arrow-up-right" />
+              </h3>
+              <p class="mt-1 text-gray-400">A minimal Wordle clone.</p>
+            </a>
+          </li>
+        </ul>
       </section>
 
-      <section>
-        <h2>Contact</h2>
+      <section id="contact">
+        <h2>Get in touch</h2>
+        <ul class="mt-4 space-y-2">
+          <li>
+            <a
+              href="mailto:contact@brn.one"
+              class="underline text-orange-400 underline-offset-4"
+              >contact@brn.one</a
+            >
+          </li>
+        </ul>
       </section>
     </div>
+
+    <footer class="mt-16 mb-16">
+      <div class="text-center text-gray-500 text-sm">
+        Work in progress. Made with love using Astro.
+      </div>
+    </footer>
   </body>
 </html>
 
 <style>
   h2 {
-    @apply uppercase text-gray-500 font-medium;
-  }
-
-  a {
-    @apply underline text-orange-400 underline-offset-4;
+    @apply uppercase text-gray-500 font-semibold text-sm select-none;
   }
 </style>
