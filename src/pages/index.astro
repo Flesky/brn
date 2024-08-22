@@ -1,21 +1,10 @@
 ---
 import '@fontsource-variable/inter'
 import { Icon } from 'astro-icon/components'
-import StatItem from '../components/StatItem.astro'
+import ListIconItem from '../components/ListIconItem.astro'
+// import GraduationPost from '../components/GraduationPost.astro'
 
 const techStack = [
-  {
-    name: 'HTML5',
-    icon: 'devicon:html5',
-  },
-  {
-    name: 'CSS3',
-    icon: 'devicon:css3',
-  },
-  {
-    name: 'JavaScript',
-    icon: 'devicon:javascript',
-  },
   {
     name: 'TypeScript',
     icon: 'devicon:typescript',
@@ -31,6 +20,10 @@ const techStack = [
   {
     name: 'React',
     icon: 'devicon:react',
+  },
+  {
+    name: 'Mantine',
+    icon: 'logos:mantine-icon',
   },
   {
     name: 'Astro',
@@ -49,28 +42,37 @@ const techStack = [
     icon: 'logos:hono',
   },
   {
+    name: 'CloudFlare',
+    icon: 'devicon:cloudflare',
+  },
+  {
     name: 'PostgreSQL',
     icon: 'devicon:postgresql',
   },
   {
-    name: 'Firebase',
-    icon: 'devicon:firebase',
+    name: 'WebStorm',
+    icon: 'devicon:webstorm',
   },
-  {
-    name: 'Supabase',
-    icon: 'devicon:supabase',
-  },
-  {
-    name: 'CloudFlare',
-    icon: 'devicon:cloudflare',
-  },
+  // {
+  //   name: 'Firebase',
+  //   icon: 'devicon:firebase',
+  // },
+  // {
+  //   name: 'Supabase',
+  //   icon: 'devicon:supabase',
+  // },
 ]
 
 const experience = [
   {
-    duration: '2021 - Present',
+    date: 'Feb. 2023 - now',
+    position: 'Software Developer and IT Officer',
     company: 'SMSGlobal',
-    location: 'Quezon City, Philippines',
+  },
+  {
+    date: 'June 2022 - June 2023',
+    position: 'Lead Frontend Developer',
+    company: 'Department of Science and Technology - Philippines',
   },
 ]
 ---
@@ -83,6 +85,7 @@ const experience = [
     <meta name="generator" content={Astro.generator} />
     <title>Baron - Software Developer</title>
   </head>
+
   <body class="text-gray-200">
     <div
       class="relative bg-center w-full py-32"
@@ -91,10 +94,8 @@ const experience = [
       <div class="max-w-2xl mx-auto flex flex-col text-balance px-4">
         <div class="font-medium">Baron Rodrigo</div>
         <div class="text-gray-500 flex items-center">
-          Software Developer @ SMSGlobal<div
-            class="bg-red-500 w-1 h-1 ms-2 rounded-full animate-pulse"
-          >
-          </div>
+          Software Developer @ SMSGlobal
+          <div class="bg-red-500 w-1 h-1 ms-2 rounded-full animate-pulse"></div>
         </div>
         <div class="text-gray-500">Quezon City, Philippines</div>
         <h1
@@ -120,13 +121,14 @@ const experience = [
       </div>
     </div>
 
-    <div class="max-w-2xl mx-auto p-4 mt-6 space-y-16">
+    <div class="max-w-2xl mx-auto px-4 mt-6 space-y-16 mb-16">
       <section>
         <h2>About</h2>
         <p class="mt-4">
-          Frontend-oriented software engineer working on web applications mostly
-          using TypeScript, Vue, Nuxt, and React. Has a keen eye for details and
-          a deep understanding of paradigms, principles, and best practices.
+          Frontend-oriented software engineer working on web applications with a
+          keen eye for details and a deep understanding of paradigms,
+          principles, and best practices. Currently developing high quality
+          internal management software for SMSGlobal.
         </p>
 
         <!--<p class="mt-4">-->
@@ -138,59 +140,64 @@ const experience = [
           In my free time, I'm passionate about tech, music, and games. Here's
           my progress on some of the things I'm pursuing:
         </p>
-        <ul class="mt-2 space-y-2">
-          <StatItem icon="ph:computer-tower"
-            >80 computers built and sold</StatItem
+        <ul class="mt-4 space-y-2">
+          <ListIconItem icon="ph:computer-tower"
+            >80 PC builds commissioned</ListIconItem
           >
-          <StatItem icon="ph:text-t">130 WPM on MonkeyType</StatItem>
-          <StatItem icon="ph:medal">
+          <ListIconItem icon="ph:key-return">130 WPM on MonkeyType</ListIconItem
+          >
+          <ListIconItem icon="ph:crown">
             <span class="text-purple-400 font-medium">Master</span> in League of
             Legends
-          </StatItem>
-          <StatItem icon="ph:arrow-square-up-right-fill"
-            ><span
-              class="bg-gradient-to-b from-gray-400 to-gray-200 bg-clip-text text-transparent font-semibold"
-              >Advanced Lv. 1</span
-            > on The World's Finest Dance Simulation Game</StatItem
+          </ListIconItem>
+          <ListIconItem icon="ph:sneaker-move"
+            ><span class="text-gray-400 font-medium">Advanced Lv. 4</span> on The
+            World's Finest Dance Simulation Game</ListIconItem
           >
         </ul>
       </section>
 
-      <!--<section>-->
-      <!--  <h2>Tech Stack</h2>-->
-      <!--  <ul class="grid grid-cols-3 sm:grid-cols-6 mt-4">-->
-      <!--    {-->
-      <!--      techStack.map(({ name, icon }) => (-->
-      <!--        <li class="bg-white/10 hover:bg-white/20 transition duration-150 border border-black hover:border-gray-200/20 select-none rounded flex flex-col py-3 px-2 gap-3 items-center text-center">-->
-      <!--          <Icon name={icon} size="28" />-->
-      <!--          <div class="text-xs leading-none">{name}</div>-->
-      <!--        </li>-->
-      <!--      ))-->
-      <!--    }-->
-      <!--  </ul>-->
-      <!--</section>-->
+      <section>
+        <h2>Tech Stack</h2>
+        <ul class="grid grid-cols-3 sm:grid-cols-6 mt-4">
+          {
+            techStack.map(({ name, icon }) => (
+              <li class="bg-white/10 hover:bg-white/20 transition border border-black hover:border-gray-200/20 select-none rounded flex flex-col py-3 px-2 gap-3 items-center text-center">
+                <Icon name={icon} size="28" />
+                <div class="text-xs leading-none">{name}</div>
+              </li>
+            ))
+          }
+        </ul>
+      </section>
 
       <section>
         <h2>Experience</h2>
         <ul class="mt-4 space-y-4">
-          <li class="grid grid-cols-3 gap-3">
-            <div>Feb. 2023 - now</div>
-            <div class="col-span-2">
-              <div>Software Developer</div><div class="text-gray-400">
-                SMSGlobal
-              </div>
-            </div>
-          </li>
-          <li class="grid grid-cols-3 gap-3">
-            <div>June 2022 - June 2023</div>
-            <div class="col-span-2">
-              <div>Lead Frontend Developer</div><div class="text-gray-400">
-                Department of Science and Technology - Philippines
-              </div>
-            </div>
-          </li>
+          {
+            experience.map(({ date, position, company }) => (
+              <li class="grid grid-cols-3 gap-3">
+                <div class="text-gray-400">{date}</div>
+                <div class="col-span-2">
+                  <>
+                    <div>{position}</div>
+                    <div class="text-gray-400">{company}</div>
+                  </>
+                </div>
+              </li>
+            ))
+          }
         </ul>
       </section>
+
+      <!--<section>-->
+      <!--  <h2>Education</h2>-->
+      <!--  <p class="my-4">-->
+      <!--    Rather than talk about it, here's my commemorative graduation Facebook-->
+      <!--    post:-->
+      <!--  </p>-->
+      <!--  <GraduationPost />-->
+      <!--</section>-->
 
       <section>
         <h2>Projects</h2>
@@ -200,7 +207,7 @@ const experience = [
               href="https://github.com/flesky/react-admin-starter"
               target="_blank"
             >
-              <h3 class="inline-flex flex items-center gap-2">
+              <h3 class="inline-flex items-center gap-2">
                 react-admin-starter<Icon name="ph:arrow-up-right" />
               </h3>
               <p class="mt-1 text-gray-400">
@@ -211,7 +218,7 @@ const experience = [
           </li>
           <li>
             <a href="https://worden.web.app" target="_blank">
-              <h3 class="inline-flex flex items-center gap-2">
+              <h3 class="inline-flex items-center gap-2">
                 Worden<Icon name="ph:arrow-up-right" />
               </h3>
               <p class="mt-1 text-gray-400">A minimal Wordle clone.</p>
@@ -223,27 +230,35 @@ const experience = [
       <section id="contact">
         <h2>Get in touch</h2>
         <ul class="mt-4 space-y-2">
-          <li>
+          <ListIconItem icon="ph:envelope">
             <a
               href="mailto:contact@brn.one"
               class="underline text-orange-400 underline-offset-4"
               >contact@brn.one</a
+            ></ListIconItem
+          >
+          <ListIconItem icon="ph:linkedin-logo">
+            <a
+              href="https://www.linkedin.com/in/baron-rodrigo/"
+              target="_blank"
+              class="underline text-orange-400 underline-offset-4"
+              >linkedin.com/in/baron-rodrigo</a
             >
-          </li>
+          </ListIconItem>
         </ul>
       </section>
+
+      <footer class="mt-16">
+        <div class="text-center text-gray-500 text-sm">
+          Work in progress. Made with love using Astro.
+        </div>
+      </footer>
     </div>
 
-    <footer class="mt-16 mb-16">
-      <div class="text-center text-gray-500 text-sm">
-        Work in progress. Made with love using Astro.
-      </div>
-    </footer>
+    <style>
+      h2 {
+        @apply uppercase text-gray-500 font-semibold text-sm select-none;
+      }
+    </style>
   </body>
 </html>
-
-<style>
-  h2 {
-    @apply uppercase text-gray-500 font-semibold text-sm select-none;
-  }
-</style>
