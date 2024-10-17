@@ -107,7 +107,7 @@ const experience = [
         <div class="mt-12">
           <a
             href="#contact"
-            class="bg-orange-700 text-white rounded px-6 py-2.5">Contact</a
+            class="bg-orange-600 text-white rounded px-6 py-2.5">Contact</a
           >
           <!--<a-->
           <!--  class="border border-gray-700 bg-gray-800 text-white rounded px-6 py-2"-->
@@ -133,29 +133,24 @@ const experience = [
         </p>
 
         <!--<p class="mt-4">-->
-        <!--  I currently work for SMSGlobal, building beautiful, fast, and-->
-        <!--  functional applications for our clients.-->
+        <!--  In my free time, I'm passionate about tech, music, and games. Here's-->
+        <!--  my progress on some of the things I'm pursuing:-->
         <!--</p>-->
-
-        <p class="mt-4">
-          In my free time, I'm passionate about tech, music, and games. Here's
-          my progress on some of the things I'm pursuing:
-        </p>
-        <ul class="mt-4 space-y-2">
-          <ListIconItem icon="ph:computer-tower"
-            >80 PC builds commissioned</ListIconItem
-          >
-          <ListIconItem icon="ph:key-return">130 WPM on MonkeyType</ListIconItem
-          >
-          <ListIconItem icon="ph:crown">
-            <span class="text-purple-400 font-medium">Master</span> in League of
-            Legends
-          </ListIconItem>
-          <ListIconItem icon="ph:sneaker-move"
-            ><span class="text-gray-400 font-medium">Advanced Lv. 4</span> on The
-            World's Finest Dance Simulation Game</ListIconItem
-          >
-        </ul>
+        <!--<ul class="mt-4 space-y-2">-->
+        <!--  <ListIconItem icon="ph:computer-tower"-->
+        <!--    >80 PC builds commissioned</ListIconItem-->
+        <!--  >-->
+        <!--  <ListIconItem icon="ph:key-return">130 WPM on MonkeyType</ListIconItem-->
+        <!--  >-->
+        <!--  <ListIconItem icon="ph:crown">-->
+        <!--    <span class="text-purple-400 font-medium">Master</span> in League of-->
+        <!--    Legends-->
+        <!--  </ListIconItem>-->
+        <!--  <ListIconItem icon="ph:sneaker-move"-->
+        <!--    ><span class="text-gray-400 font-medium">Advanced Lv. 4</span> on The-->
+        <!--    World's Finest Dance Simulation Game</ListIconItem-->
+        <!--  >-->
+        <!--</ul>-->
       </section>
 
       <section>
@@ -200,53 +195,58 @@ const experience = [
       <!--  <GraduationPost />-->
       <!--</section>-->
 
-      <section>
-        <h2>Projects</h2>
-        <ul class="mt-4 space-y-4">
-          <li>
-            <a
-              href="https://github.com/flesky/react-admin-starter"
-              target="_blank"
-            >
-              <h3 class="inline-flex items-center gap-2">
-                react-admin-starter<Icon name="ph:arrow-up-right" />
-              </h3>
-              <p class="mt-1 text-gray-400">
-                An opinionated starter template for rapidly developing admin
-                apps using React.
-              </p></a
-            >
-          </li>
-          <li>
-            <a href="https://worden.web.app" target="_blank">
-              <h3 class="inline-flex items-center gap-2">
-                Worden<Icon name="ph:arrow-up-right" />
-              </h3>
-              <p class="mt-1 text-gray-400">A minimal Wordle clone.</p>
-            </a>
-          </li>
-        </ul>
-      </section>
+      <!--<section>-->
+      <!--  <h2>Projects</h2>-->
+      <!--  <ul class="mt-4 space-y-4">-->
+      <!--    <li>-->
+      <!--      <a-->
+      <!--        href="https://github.com/flesky/react-admin-starter"-->
+      <!--        target="_blank"-->
+      <!--      >-->
+      <!--        <h3 class="inline-flex items-center gap-2">-->
+      <!--          react-admin-starter<Icon name="ph:arrow-up-right" />-->
+      <!--        </h3>-->
+      <!--        <p class="mt-1 text-gray-400">-->
+      <!--          An opinionated starter template for rapidly developing admin-->
+      <!--          apps using React.-->
+      <!--        </p></a-->
+      <!--      >-->
+      <!--    </li>-->
+      <!--    <li>-->
+      <!--      <a href="https://worden.web.app" target="_blank">-->
+      <!--        <h3 class="inline-flex items-center gap-2">-->
+      <!--          Worden<Icon name="ph:arrow-up-right" />-->
+      <!--        </h3>-->
+      <!--        <p class="mt-1 text-gray-400">A minimal Wordle clone.</p>-->
+      <!--      </a>-->
+      <!--    </li>-->
+      <!--  </ul>-->
+      <!--</section>-->
 
-      <section id="contact">
-        <h2>Get in touch</h2>
+      <section id="links">
+        <h2>Links</h2>
         <ul class="mt-4 space-y-2">
-          <ListIconItem icon="ph:envelope">
-            <a
-              href="mailto:contact@brn.one"
-              class="underline text-orange-400 underline-offset-4"
-              >contact@brn.one</a
-            ></ListIconItem
-          >
           <ListIconItem icon="ph:linkedin-logo">
             <a
               href="https://www.linkedin.com/in/baron-rodrigo/"
               target="_blank"
-              class="underline text-orange-400 underline-offset-4"
-              >linkedin.com/in/baron-rodrigo</a
+              class="underline text-orange-400 underline-offset-4">LinkedIn</a
             >
           </ListIconItem>
         </ul>
+      </section>
+
+      <section
+        id="contact"
+        class="div bg-gray-800 px-4 py-8 flex items-center flex-col text-center rounded-3xl"
+      >
+        <Icon size={32} name="ph:telegram-logo" />
+        <h2 class="text-2xl mt-3">Let's get in touch</h2>
+        <a
+          href="mailto:contact@brn.one"
+          class="block max-w-64 w-full bg-orange-600 p-2 text-lg mt-8 rounded-full"
+          >contact@brn.one</a
+        >
       </section>
 
       <footer class="mt-16">
@@ -257,7 +257,7 @@ const experience = [
     </div>
 
     <style>
-      h2 {
+      section:not(#contact) > h2 {
         @apply uppercase text-gray-500 font-semibold text-sm select-none;
       }
     </style>
